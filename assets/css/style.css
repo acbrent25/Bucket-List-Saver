@@ -1,0 +1,138 @@
+/**************
+Colors
+Yellow: #ffc107;
+Blue: #183442
+
+**************/
+
+
+
+body#index {
+    background: url('../img/iceland-waterfall-blu.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body {
+    background: url('../img/concrete_seamless.png') repeat;
+
+}
+
+
+
+
+/* MAP SYTLES */
+#map {
+height: 100%;
+}
+
+/* Optional: Makes the sample page fill the window. */
+#map html, body {
+    height: 450px;
+    margin: 0;
+    padding: 0;
+}
+
+.card.border-info {
+    margin: 20px 0;
+}
+
+h1,h2,h3,h4 {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+}
+
+#main {
+    margin-top: 200px;
+    color: #fff;
+}
+
+div#login-from {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #fff;
+}
+
+
+
+.border-info {
+    border-color: #ddd !important;
+}
+
+#bucket-area {
+    margin-top: 4em;
+    padding-bottom: 100px;
+}
+
+.card-header, .jumbotron {
+    background: #183442;
+    color: #fff;
+}
+
+.jumbotron {
+    margin-bottom: 1em;
+}
+
+.card-header h4 {
+    margin-bottom: .1rem;
+}
+
+.card-body button {
+    margin: 0 .5rem;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #183442;
+    border-color: #183442;
+}
+
+.btn-primary:hover {
+    background-color: #21485C;
+    border-color: #21485C;
+}
+
+
+.btn-danger {
+    color: #fff;
+    background-color: #183442;
+    border-color: #183442;
+}
+
+.btn-danger:hover {
+    background-color: #21485C;
+    border-color: #21485C;
+}
+
+p.weather {
+    text-transform: capitalize;
+}
+
+#main-header {
+    background: url('../img/skydive-bg.jpg') no-repeat top center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color: #21485C; 
+}
+
+.jumbotron {
+    padding: 150px 20px;
+}
+
+#main-header h1 {
+        font-size: 5rem;
+        color: #fff;
+    }
+
+#map-col {
+    height: 600px;
+    
+}
+
+div#map {
+    border: 5px solid #fff;
+}

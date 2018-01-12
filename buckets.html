@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bucket Listy</title>
+    
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+    <!-- Font-Awesome -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- Google Fonts  -->
+    <link href="https://fonts.googleapis.com/css?family=Cabin|Raleway:900|Fjalla+One" rel="stylesheet">
+	
+    <!-- jQuery UI Base CSS -->
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+
+  	<!-- HEADER
+    ================================================== -->
+    <header class="site-header" role="banner">
+        <div class="jumbotron " id="main-header">
+            <div class="container text-center">
+                <h1>Bucket Listy</h1>
+                <p class="lead"></p>
+            </div>
+            <div class="col" id="map-col">
+                <div id="map"></div>
+            </div>
+        </div>
+        
+    </header>
+    
+  	<!-- MAP
+    ================================================== -->
+    <!-- <section id="map-section">
+        <div class="container">
+          <div class="row">
+            <div class="col" id="map-col">
+                <div id="map"></div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+	<!-- Train Schedule
+    ================================================== -->
+    <section id="bucket-area">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Bucket List</h4>
+                        </div><!--/ card header -->
+                        <div class="card-body" id="bucket-well" >
+                            
+                        </div><!--/ card body -->
+                    </div><!--/ card -->
+                </div><!--/ col-->
+                
+                
+                <!-- Add a Bucket
+                ================================================== -->
+                <div id="add-bucket" class="col-lg-4">
+                       
+                    <div class="card">
+                        <div class="card-header">
+                            <h4>Add a Bucket List Item</h4>
+                        </div><!--/ card header -->
+                        <div class="card-body">
+                            <form id="bucket-form">
+                                <div class="form-group">
+                                    <label class="form-control-label" for="bucket-title">Bucket Title</label>
+                                    <input type="text" class="form-control" id="bucket-title" placeholder="Sky Dive NY">
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-control-label" for="datepicker">Date to complete by:</label>
+                                    <input type="text" class="form-control" id="datepicker">
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label class="form-control-label" for="street-address">Street Address</label>
+                                    <input type="text" class="form-control" id="street-address" placeholder="23 Spring View Way" >
+                                </div>
+
+                                <div class="form-group">
+                                    <label class="form-control-label" for="city">City</label>
+                                    <input type="text" class="form-control" id="city" placeholder="Buffalo" >
+                                </div>
+                                
+                                <div class="row">
+                                    <div class="col-sm-8">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="state">State</label>
+                                            <input type="text" class="form-control" id="state" placeholder="NY" >
+                                        </div>
+        
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <div class="form-group">
+                                            <label class="form-control-label" for="zip">Zip Code</label>
+                                            <input type="text" class="form-control" id="zip" placeholder="07974" >
+                                        </div>
+        
+                                    </div>
+                                </div>
+
+                                
+                                <div class="form-group">
+                                    <label class="form-control-label" for="bucket-notes">Notes</label>
+                                    <input type="text" class="form-control" id="bucket-notes" placeholder="" value="">
+                                </div>
+                                <button type="submit" id="submit" class="btn btn-danger">Submit</button>
+                                </form>
+                        </div><!--/ card body -->
+                    </div><!--/ card -->
+        
+                </div><!--/ col -->
+
+
+            </div><!--/ row -->
+        </div><!--/ contianer -->
+    </section>
+
+
+    <section id="modal">
+            <div class="modal" id="editModal">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title">Edit Your Bucket</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-group">
+                                <label class="form-control-label" data-key="" for="bucket-title">Bucket Title</label>
+                                <input type="text" class="form-control" id="bucket-title" placeholder="" data-title="">
+                            </div>
+                            <div class="form-group">
+                                <label class="form-control-label" for="bucket-notes">Notes</label>
+                                <input type="text" class="form-control" id="bucket-notes" placeholder="" data-notes="">
+                            </div>
+
+                            <button type="submit" id="modal-submit" class="btn btn-danger">Submit</button>
+                            </form>
+                    </div>
+                  
+                  </div>
+                </div>
+              </div>
+        </section>
+
+
+        
+    <!-- Firebase -->
+    
+
+    
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    
+    <!-- jQuery -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <!-- jQuery UI -->
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+    
+    
+    <!-- Javascript -->
+    <script src="assets/js/app.js"></script>
+    <!-- Google maps API -->
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCXwy3xPFGvMjsSOxtTdW-zlL9OZPZwU0E&callback=initMap"></script>
+  </body>
+</html>
